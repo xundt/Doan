@@ -1,0 +1,25 @@
+﻿@model List<ForKids.Models.TbProgram>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>1</th>
+            <th>1</th>
+            <th>1</th>
+            <th>1</th>
+            <th>1</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model){
+            <tr>
+                <td>@item.ProgramsId</td>
+                <td>@item.Programsname</td>
+                <td>@item.AgeGroup</td>
+                <td>@item.Descriptions</td>
+                <td>@item.Duration</td>
+                <td>@item.Prince</td>
+            </tr>
+        }
+    </tbody>
+</table>

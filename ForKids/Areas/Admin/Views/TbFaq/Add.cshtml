@@ -1,0 +1,55 @@
+﻿@model ForKids.Models.AddNewFaq
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 500px;
+            margin: auto;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+<body>
+    <h2>FAQ Input Form</h2>
+    <form asp-action="Add" asp-controller="Faq" method="post">
+        <!-- Input for Question -->
+        <label asp-for="Question"></label>
+        <input type="text" asp-for="Question" placeholder="Enter the question..." required>
+
+        <!-- Input for Answer -->
+        <label asp-for="Answer"></label>
+        <textarea asp-for="Answer" placeholder="Enter the answer..." rows="4" required></textarea>
+
+        <!-- Input for Descriptions -->
+        <label asp-for="Descriptions"></label>
+        <textarea asp-for="Descriptions" placeholder="Enter additional details..." rows="4"></textarea>
+
+        <!-- Submit Button -->
+        <button type="submit">Save FAQ</button>
+    </form>
+</body>
+
